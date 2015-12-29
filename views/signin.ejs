@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        <%=title %>
+    </title>
+    <link href="/lib/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <link href="/lib/css/style.css" type="text/css" rel="stylesheet"/>
+
+</head>
+<body>
+<div class="container" >
+<section class="row">
+    <div class="col-xs-offset-1 col-xs-10 col-md-offset-4 col-md-4 login-form-bg">
+        <h3 class="text-center">Login</h3>
+        <form name="userForm" action="/signin" method="post" class="signin" novalidate autocomplete="off">
+            <fieldset>
+
+
+                <div class="form-group">
+                    <div class="input-group" show-errors>
+          <span class="input-group-addon">
+            <i class="text-muted glyphicon glyphicon-user"></i>
+          </span>
+                        <input type="text" id="username" name="username" class="form-control"  placeholder="Username" >
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group" show-errors>
+          <span class="input-group-addon">
+            <i class="text-muted glyphicon glyphicon-asterisk"></i>
+          </span>
+                        <input type="password" id="password" name="password" class="form-control"  placeholder="Password" >
+
+                    </div>
+                </div>
+                <div class="text-center form-group">
+                    <button type="submit" class="btn btn-success btn-lg btn-block">Sign in</button>
+                    </br>
+                </div>
+                <div class="text-center forgot-password">
+                    <a ui-sref="password.forgot">Forgot your password?</a>
+                    <a href="/signup">Sign up</a>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    </section>
+</div>
+
+</body>
+</html>

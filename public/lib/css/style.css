@@ -1,0 +1,10 @@
+.login-form-bg{
+    background-color: white;
+    border: 15px solid;
+    border-radius: 15px;
+    border-color: white;
+    margin-top:50px;
+}
+body{
+    background-color: #ccc;
+}

@@ -11,7 +11,7 @@ var express = require('express'),
     flash = require('connect-flash');
 module.exports = function () {
     var app = express();
-
+    app.use(morgan('dev'));
     app.use(bodyParser.urlencoded({extended : true}));
     app.use(bodyParser.json());
     app.use(methodOverride());
@@ -19,8 +19,9 @@ module.exports = function () {
     app.use(passport.initialize());
     app.use(passport.session());
     app.use(flash());
-    app.set('views','./app/views');
+    app.set('views','./views');
     app.set('view engine', 'ejs');
+    require('../routes/index.server.routes.js')(app);
 
     return app;
 };
